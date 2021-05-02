@@ -10,7 +10,7 @@ const SearchCard = () => {
             <Card.Body>
                 <Form style={{ display: 'flex' }} action="/search" method="get">
                     <Form.Control type="search" name="query" placeholder="Search Torrents!" />
-                    <Button variant="dark" style={{ height: '38px' }}>Search</Button>
+                    <Button variant="dark" style={{ height: '38px' }} type="submit">Search</Button>
                 </Form>
                 <Card.Text style={{ marginLeft: 'auto', marginRight: 'auto', marginTop: '100px', textAlign: 'center' }}>
                     kstorrentse is a tribute to the torrentz.eu.

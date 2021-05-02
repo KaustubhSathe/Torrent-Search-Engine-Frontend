@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 
 import Feedback from "./components/Feedback";
+import Torrents from "./components/Torrents";
 
 const Wrapper = styled(Container)`
   margin-top: 70px;
@@ -19,7 +20,7 @@ const Wrapper = styled(Container)`
 
 const App = () => {
   return (
-    <Router>
+    <Router >
       <Header />
       <Switch>
         <Route exact path="/">
@@ -37,6 +38,12 @@ const App = () => {
         <Route exact path="/feedback">
           <Wrapper>
             <Feedback />
+          </Wrapper>
+        </Route>
+
+        <Route exact path="/search">
+          <Wrapper>
+            <Torrents />
           </Wrapper>
         </Route>
 
