@@ -3,7 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import styled from "styled-components";
 import Nav from "react-bootstrap/Nav";
-import { Link } from "react-router-dom";
+
 const Wrapper = styled(Container)`
     padding-left: 25px;
     padding-right: 25px;
