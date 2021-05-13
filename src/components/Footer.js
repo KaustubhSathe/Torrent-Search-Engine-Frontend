@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 
 import { Link } from "react-router-dom";
@@ -13,7 +12,7 @@ const Footer = () => {
         }}>
             <Container>
                 <span>
-                    <strong style={{ color: 'white' }}>&copy; Torrent-Search-Engine</strong>
+                    <strong style={{ color: 'white' }}>&copy; torrentic</strong>
                     &nbsp;&nbsp;&nbsp;
                     <Link to="/about">About</Link>
                 </span>

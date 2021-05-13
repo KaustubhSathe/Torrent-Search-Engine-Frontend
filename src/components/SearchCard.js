@@ -13,7 +13,7 @@ const SearchCard = () => {
                     <Button variant="dark" style={{ height: '38px' }} type="submit">Search</Button>
                 </Form>
                 <Card.Text style={{ marginLeft: 'auto', marginRight: 'auto', marginTop: '100px', textAlign: 'center' }}>
-                    kstorrentse is a tribute to the torrentz.eu.
+                    torrentic is a tribute to the torrentz.eu.
                 </Card.Text>
             </Card.Body>
         </Card>

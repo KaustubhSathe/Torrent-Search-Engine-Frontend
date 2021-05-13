@@ -17,7 +17,7 @@ const Header = () => {
     return (
         <Navbar bg="dark" variant="dark" fixed="top" style={{ marginBottom: '10px', display: 'block' }}>
             <Wrapper>
-                <Navbar.Brand href="/">Torrent-Search-Engine</Navbar.Brand>
+                <Navbar.Brand href="/">torrentic</Navbar.Brand>
                 <Navi>
                     <Nav.Link href="/about">About</Nav.Link>
                     <Nav.Link href="/feedback">Feedback</Nav.Link>

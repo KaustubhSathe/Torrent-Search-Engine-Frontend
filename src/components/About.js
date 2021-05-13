@@ -7,15 +7,15 @@ const About = () => {
             <Tabs defaultActiveKey="facts">
                 <Tab eventKey="facts" title="Facts">
                     <ol>
-                        <li>kstorrentse is an aggregator and a Multisearch. This means we just search other search engines.</li>
-                        <li>kstorrentse is a very powerful internet location search tool.</li>
-                        <li>kstorrentse is a very powerful internet location search tool.</li>
-                        <li>kstorrentse does not host or "make available" any files or torrents in any way, shape or form.</li>
-                        <li>kstorrentse links to other independent search engines that might host torrent files. We have absolutely no control over those domains.</li>
+                        <li>torrentic is an aggregator and a Multisearch. This means we just search other search engines.</li>
+                        <li>torrentic is a very powerful internet location search tool.</li>
+                        <li>torrentic is a very powerful internet location search tool.</li>
+                        <li>torrentic does not host or "make available" any files or torrents in any way, shape or form.</li>
+                        <li>torrentic links to other independent search engines that might host torrent files. We have absolutely no control over those domains.</li>
                         <li>Indexing process is completely automated. We don't check it. Whatever the robots find, are sucked in. The good, the bad and the ugly.</li>
-                        <li>kstorrentse files are simply metadata and cannot be copyrighted.</li>
+                        <li>torrentic files are simply metadata and cannot be copyrighted.</li>
                         <li>We don't host torrents, we don't even save torrents. We just extract the filename and the size from the sources.</li>
-                        <li>kstorrentse is similar to Google.</li>
+                        <li>torrentic is similar to Google.</li>
                     </ol>
                 </Tab>
                 <Tab eventKey="privacy" title="Privacy">
