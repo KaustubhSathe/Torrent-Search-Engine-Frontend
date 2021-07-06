@@ -3,8 +3,14 @@ import Table from "react-bootstrap/Table";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Pagination from "react-bootstrap/Pagination";
+import { useLocation } from "react-router-dom";
 
-const Torrents = () => {
+const Torrents = (props) => {
+    let query = new URLSearchParams(useLocation().search);
+    console.log(query.get("query"));
+
+
+
     return (
         <>
             <Form style={{ display: 'flex', marginBottom: '10px' }} action="/search" method="get">
@@ -24,36 +30,7 @@ const Torrents = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>TPB</td>
-                        <td>saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
-                        <td>78787 MB</td>
-                        <td>5454</td>
-                        <td>32</td>
-                        <td>142342343234</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>TPB</td>
-                        <td>saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
-                        <td>78787 MB</td>
-                        <td>5454</td>
-                        <td>32</td>
-                        <td>142342343234</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>TPB</td>
-                        <td>saaaaaaaaaaaaaaaaaaasad MB
-                        asdasd
-                        asdasd
-                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
-                        <td>78787 MB</td>
-                        <td>5454</td>
-                        <td>32</td>
-                        <td>142342343234</td>
-                    </tr>
+
                 </tbody>
             </Table>
 

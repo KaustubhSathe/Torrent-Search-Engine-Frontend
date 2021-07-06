@@ -21,7 +21,7 @@ const Header = () => {
                 <Navi>
                     <Nav.Link href="/about">About</Nav.Link>
                     <Nav.Link href="/feedback">Feedback</Nav.Link>
-                    <Nav.Link href="https://www.google.com" target="_blank">github</Nav.Link>
+                    <Nav.Link href="https://github.com/KaustubhSathe" target="_blank">github</Nav.Link>
                 </Navi>
             </Wrapper>
         </Navbar >
