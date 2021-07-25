@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 
-const SearchCard = () => {
+const SearchCard = ({ location }) => {
     return (
         <Card style={{ width: '100%', height: '200px' }}>
             <Card.Body>

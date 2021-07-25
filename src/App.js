@@ -41,7 +41,7 @@ const App = () => {
           </Wrapper>
         </Route>
 
-        <Route exact path="/search">
+        <Route exact path="/search" >
           <Wrapper>
             <Torrents />
           </Wrapper>
