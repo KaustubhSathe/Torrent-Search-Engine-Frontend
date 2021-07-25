@@ -4,12 +4,6 @@ import Form from "react-bootstrap/Form";
 import { useLocation } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Pagination from "react-bootstrap/Pagination";
-import { useLocation } from "react-router-dom";
-
-const Torrents = (props) => {
-    let query = new URLSearchParams(useLocation().search);
-    console.log(query.get("query"));
-
 
 
 const Torrents = () => {
@@ -17,7 +11,6 @@ const Torrents = () => {
     const params = useLocation().search;
     useEffect(() => {
         const searchParams = new URLSearchParams(params);
-        //console.log("http://localhost:3001/search?" + searchParams.toString());
         fetch("https://torrenticz.herokuapp.com/search?" + searchParams.toString())
         .then(res => res.json())
         .then(res => {
