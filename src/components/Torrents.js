@@ -1,10 +1,24 @@
-import React from "react";
+import React, {useState,useEffect} from "react";
 import Table from "react-bootstrap/Table";
 import Form from "react-bootstrap/Form";
+import { useLocation } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Pagination from "react-bootstrap/Pagination";
 
 const Torrents = () => {
+    const [torrents,setTorrents] = useState([]);
+    const params = useLocation().search;
+    useEffect(() => {
+        const searchParams = new URLSearchParams(params);
+        //console.log("http://localhost:3001/search?" + searchParams.toString());
+        fetch("https://torrenticz.herokuapp.com/search?" + searchParams.toString())
+        .then(res => res.json())
+        .then(res => {
+            setTorrents(res)            
+        }).catch(err => console.error(err));
+    }, [torrents,params]);
+
+
     return (
         <>
             <Form style={{ display: 'flex', marginBottom: '10px' }} action="/search" method="get">
@@ -24,36 +38,19 @@ const Torrents = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>TPB</td>
-                        <td>saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
-                        <td>78787 MB</td>
-                        <td>5454</td>
-                        <td>32</td>
-                        <td>142342343234</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>TPB</td>
-                        <td>saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
-                        <td>78787 MB</td>
-                        <td>5454</td>
-                        <td>32</td>
-                        <td>142342343234</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>TPB</td>
-                        <td>saaaaaaaaaaaaaaaaaaasad MB
-                        asdasd
-                        asdasd
-                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
-                        <td>78787 MB</td>
-                        <td>5454</td>
-                        <td>32</td>
-                        <td>142342343234</td>
-                    </tr>
+                    {
+                        torrents.map((itr,i) => (
+                            <tr>
+                                <td>{i + 1}</td>
+                                <td>{itr.Source}</td>
+                                <td>{itr.Name}</td>
+                                <td>{itr.Size}</td>
+                                <td>{itr.Seeders}</td>
+                                <td>{itr.Leechers}</td>
+                                <td>{itr.UploadDate}</td>
+                            </tr>
+                        ))
+                    }
                 </tbody>
             </Table>
 
@@ -63,7 +60,7 @@ const Torrents = () => {
                 <Pagination.Item active>{1}</Pagination.Item>
                 <Pagination.Item>{2}</Pagination.Item>
                 <Pagination.Item>{3}</Pagination.Item>
-
+                
                 <Pagination.Ellipsis />
                 <Pagination.Item>{20}</Pagination.Item>
                 <Pagination.Next style={{ marginRight: '25%' }} />
