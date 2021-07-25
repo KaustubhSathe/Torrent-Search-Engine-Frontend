@@ -22,7 +22,7 @@ const Torrents = () => {
     return (
         <>
             <Form style={{ display: 'flex', marginBottom: '10px' }} action="/search" method="get">
-                <Form.Control type="search" name="query" placeholder="Search Torrents!" />
+                <Form.Control type="search" name="search" placeholder="Search Torrents!" />
                 <Button variant="dark" style={{ height: '38px' }} type="submit">Search</Button>
             </Form>
             <Table striped bordered hover size="sm">
