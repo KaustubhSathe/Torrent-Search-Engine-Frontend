@@ -43,7 +43,7 @@ const Torrents = () => {
                             <tr>
                                 <td>{i + 1}</td>
                                 <td>{itr.Source}</td>
-                                <td>{itr.Name}</td>
+                                <td><a href={itr.Link}>{itr.Name}</a></td>
                                 <td>{itr.Size}</td>
                                 <td>{itr.Seeders}</td>
                                 <td>{itr.Leechers}</td>
@@ -53,18 +53,6 @@ const Torrents = () => {
                     }
                 </tbody>
             </Table>
-
-
-            <Pagination style={{ paddingLeft: '25%', paddingRight: '25%' }}>
-                <Pagination.Prev style={{ marginLeft: '25%' }} />
-                <Pagination.Item active>{1}</Pagination.Item>
-                <Pagination.Item>{2}</Pagination.Item>
-                <Pagination.Item>{3}</Pagination.Item>
-                
-                <Pagination.Ellipsis />
-                <Pagination.Item>{20}</Pagination.Item>
-                <Pagination.Next style={{ marginRight: '25%' }} />
-            </Pagination>
         </>
     );
 }
