@@ -4,8 +4,6 @@ import Form from "react-bootstrap/Form";
 import { useLocation } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 
-
-
 const Torrents = () => {
     const [torrents,setTorrents] = useState([]);
     const params = useLocation().search;
